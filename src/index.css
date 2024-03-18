@@ -1,13 +1,777 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F0EFF5;
+}
+/*-------------------Navbar-----------------------*/
+.nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
+  height: 72px;
+  align-items: center;
+  border-bottom: 1px rgb(223, 220, 220) solid;
+  position:fixed;
+  background-color: #091D36;
+transform: translateY(0);
+transition-property: transform;
+transition-duration: 0.3s;
+transition-timing-function: ease-in-out;
+z-index: 999;
+         
+}
+.nav img{
+  height: 100%;
+  
+}
+.navbar{
+  width: 100%;
+  text-decoration: none;
+  color:#F0EFF5;
+  font-weight: 400;
+  font-size: 1rem;
+  border-right: 2px gray solid;
+  text-align: center;
+  
+}
+.logo-link{
+  
+  width: 50%;
+  height: auto;
+}
+.logo{
+  width: 120px;
+  height: 10px;
+}
+.navbar-section{
+  display: flex;
+  width: 100%;
+}
+.navbar.active,.navbar:hover{
+  color: rgb(150, 144, 144);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.menu-icon{
+  color: #F0EFF5;
+  display: none;
+  
+}
+.hidden-navbar{
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*--------------------tourist-place-----------------------*/
+.tourist-place{
+  padding-top: 90px;
+  
+}
+.place-section{
+  
+  display: grid;
+  place-items: center;
+}
+ h1{
+  color:#091D36;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+}
+.place-article{
+  margin-top: 20px;
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  gap: 10px;
+  row-gap: 40px;
+}
+.place-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-content img{
+  width: 90%;
+  height: 41vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px 10px 0px 0px;
+
+}
+.place-content h4{
+  font-size: 20px;
+}
+.place-content:hover img {
+  transition: .6s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  transform: scale(1.1);
+}
+
+.article-text{
+  background-color: bisque;
+  width: 90%;
+  border-radius: 0px 0px 10px 10px;
+  color: #F0EFF5;
+  background-color: #0B4C84;
+}
+.hidden-card{
+  display: none;
+  font-size: 14px;
+  
+}
+.place-content:hover .hidden-card,
+.place-content:hover .article-text {
+    display: block;
+    padding: 0px 15px;
+    
+    transition: .6s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  transform: scale(1.05);
+}
+
+.place-content:hover .article-text {
+    width: 94.5%;
+    transition: .6s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  transform: scale(1.05);
+}
+
+.hidden-card{
+  
+  padding:0 10px;
+}
+.place-content:hover {
+  cursor: pointer;
+}
+
+h1{
+  margin: 0;
+}
+
+/*-------------------------car section---------------*/
+.car-rental-container{
+  display: grid;
+  place-items: center;
+  padding-top: 90px;
+  width: 100%;
+}
+.car-rental-container section{
+  width: 90%;
+  text-align: center;
+}
+
+.car-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  gap: 40px;
+  width: 100%;
+  place-items: center;
+  
+}
+
+
+
+.demo img{
+  height: 40vh;
+  width: 100%;
+  object-fit:fill;
+  border-radius:10px;
+}
+.demo h5{
+  position: relative;
+  z-index: 99;
+}
+
+.demo img:hover  {
+  transition: .6s ease-in-out;
+  -webkit-transition: .6s ease-in-out;
+  transform: scale(1.04);
+  box-shadow: 10px 10px 11px rgba(33,33,33,.2); 
+}
+
+.car-section h5{
+  font-size: 23px;
+  color: #091D36;
+  margin: 0;
+}
+.car-rental-container h3{
+  color: #a9adac;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/*--------------home ----------------------------*/
+.parallax-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.parallax-bg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: brightness(70%);
+}
+
+.parallax-text {
+  text-align: center;
+  z-index: 1;
+}
+
+
+.parallax-text h1{
+  color: #F0EFF5;
+  font-size: 70px;
+  
+}
+.parallax-text p{
+  color: #c3ccca;
+  margin: 0;
+}
+.parallax-text button{
+  margin-top: 20px;
+  background-color:  #0B4C84;
+  padding: 10px;
+  border-color: transparent;
+  border-radius: 5px;
+  color: #F0EFF5;
+  font-size: 17px;
+}
+.parallax-text button:hover{
+  background-color: #091D36;
+  box-shadow: 10px 10px 11px rgba(33,33,33,.2); 
+}
+.home{
+  padding-top: 70px;
+}
+
+/*--service ---*/
+.service-container{
+  background-color: white;
+  text-align: center;
+  color: #091D36;
+  padding: 20px;
+}
+.service-container h2{
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-size: 40px;
+
+}
+.service-section{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr)) ;
+  gap: 30px;
+}
+.service-content{
+  
+  display: grid;
+  place-items: center;
+}
+.service-content h4{
+  font-size: 25px;
+  font-weight: 600; 
+  margin: 0px;
+}
+.service-content p{
+  color: #a9adac;
+  width: 80%;
+}
+/* ------------brand--------------*/
+.brand-container{
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.brand-content img{
+  width: 50%;
+}
+.brand-section{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr)) ;
+  gap: 30px;
+  width: 80%;
+}
+.brand-content{
+  text-align: center;
+  cursor: pointer;
+}
+.brand-container h2{
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-size: 40px;
+font-weight: 510;
+color: #091D36;
+width: 80%;
+
+}
+
+/*--------------aboutus-----------------*/
+.about-us{
+  display: grid;
+  place-items: center;
+  padding-top: 70px;
+}
+.about-us .parallax-text{
+  width: 70%;
+}
+
+.about-us .parallax-text h1{
+  color: #d8f1eb;
+  padding-bottom: 30px;
+}
+.about-us .parallax-text p{
+  color: #F0EFF5;
+  padding-bottom: 20px;
+}
+.aboutus-content{
+  text-align: center;
+  width: 80%;
+  padding: 30px;
+}
+/*  our service */
+.ourservice-container{
+  display: grid;
+  place-items: center;
+}
+.ourservice-content img{
+  width: 60%;
+}
+.ourservice-content h4{
+  font-size: 25px;
+  font-weight: 600;
+  color: #091D36;
+}
+.ourservice-section{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) ;
+  gap: 40px;
+  width: 80%;
+}
+.ourservice-content{
+  text-align: center;
+}
+.ourservice-container h2 ,.form-container h2{
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-size: 40px;
+font-weight: 510;
+color: #091D36;
+}
+/*--------------contact----------------*/
+.contact{
+  display: grid;
+  place-items: center;
+  padding-top: 90px;
+}
+.contact-container{
+  width: 80%;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr)) ;
+}
+.contact-section{
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.contact-section img{
+  
+  height: 7vh;
+}
+.contact-section p{
+  width: 50%;
+}
+.contact-right,.contact-left{
+  text-align: center;
+}
+.contact h2{
+  
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-size: 40px;
+font-weight: 510;
+color: #091D36;
+}
+.contact h5{
+  
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-size: 20px;
+font-weight: 550;
+color: #091D36;
+}
+/*------------------form-------------------*/
+.form-container{
+  display: grid;
+  place-items: center;
+}
+.form{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  font-size: 20px;
+}
+.form-section{
+ display: grid;
+ grid-template-columns:repeat(auto-fit,minmax(200px,1fr)) ;
+ gap: 40px;
+ width: 100%;
+}
+.form-section section{
+  display: flex;
+  gap: 20px;
+}
+.form input{
+  width: 60%;
+  height: 5vh;
+  font-size: 20px;
+  color: #091D36;
+}
+.form button{
+  background-color:  #0B4C84;
+  padding: 10px;
+  border-color: transparent;
+  border-radius: 5px;
+  color: #F0EFF5;
+  font-size: 17px;
+  width: 50%;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+/*-------footer------*/
+footer{
+  background-color: #091D36;
+  color: #c3ccca;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr)) ;
+  gap: 30px;
+  text-align: center;
+  margin-top: 30px;
+
+}
+.footer-links{
+  display: flex;
+  flex-direction: column;
+  
+}
+.link{
+  color: #F0EFF5;
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+
+footer h5{
+  font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+font-size: 25px;
+font-weight: 550;
+}
+footer p{
+  color: #F0EFF5;
+}
+.copyright{
+  border-top: #F0EFF5 1px solid;
+  background-color: #091D36;
+  text-align: center;
+  
+}
+.copyright h6{
+  margin: 0;
+  padding: 20px;
+  color: #F0EFF5;
+  font-size: 17px;
+  font-weight: 400;
+}
+.footer-1{
+  padding: 10px;
+}
+
+@media screen and (max-width:1132px) {
+  .parallax-text h1{
+    font-size: 60px;
+    
+  }
+  .parallax-container{
+    height: 60vh;
+  }
+
+}
+@media screen and (max-width:920px) {
+  /*--------------------navbar---------------*/
+  .menu-icon{
+    display: block;
+    width: 100%;
+    height: 4.5vh;
+    cursor: pointer;
+  }
+  .navbar-section{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hidden-navbar{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    background-color: #767676;
+    padding: 20px;
+    z-index: 1;
+  }
+  .menu-nav{
+    text-decoration: none;
+    color:white;
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    justify-content: center;
+    
+  }
+  .menu-nav:hover{
+    color: rgb(38 38 38 );
+    text-decoration: 2px underline solid;
+  }
+  .navbar{
+    display: none;
+  }
+   h1,.contact h2{
+    font-size: 50px;
+  }
+  .car-rental-container {
+    display: grid;
+    place-content: center;
+  }
+  .car-rental-container h3{
+    font-size: 20px;
+  }
+  .car-section{
+    display: flex;
+    flex-direction: column;
+  }
+  .form{
+    font-size: 17px;
+    width: 80%;
+  }
+  
+  
+}
+
+@media screen and (max-width:820px) {
+  .parallax-container{
+    height: 50vh;
+  }
+  .about-us h1{
+    font-size: 50px;
+  }
+  .about-us p{
+    font-size: 15px;
+  }
+  .about-hide{
+    display: none;
+  }
+}
+@media screen and (max-width:695px) {
+  .parallax-container{
+    height: 40vh;
+  }
+  .parallax-text h1{
+    font-size: 50px;
+  }
+  .parallax-text p{
+    font-size: 15px;
+  }
+  .parallax-text button{
+    font-size: 17px;
+  }
+  .aboutus-content{
+    width: 90%;
+  }
+  .aboutus-content h1{
+    font-size: 40px;
+  }
+  .form{
+    font-size: 15px;
+  }
+  .form input{
+    height: 4vh;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .ourservice-content img{
+    width: 30%;
+  }
+  .car{
+    display: grid;
+    place-items: center;
+  }
+  .demo img{
+    height: auto;
+  }
+  .car-section{
+    width: 85%;
+  }
+  
+  .form input{
+    width: 60%;
+  }
+  
+}
+
+@media screen and (max-width:504px) {
+  .parallax-container{
+    height: 30vh;
+  }
+  .parallax-text h1{
+    font-size: 40px;
+  }
+  .parallax-text p{
+    font-size: 13px;
+  }
+   h1{
+    font-size: 35px;
+    font-weight: 800;
+  }
+  .contact h2{
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .car-rental-container h3{
+    font-size: 18px;
+  }
+  .place-article{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-left{
+    display: grid;
+    place-items: center;
+  }
+  .contact-container{
+    width: 95%;
+  }
+  .contact-left p{
+    font-size: 13px;
+    width: 90%;
+  }
+  .contact-container h5{
+    font-size: 17px;
+  }
+  .ourservice-container,.service-section,.brand-section{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home h2{
+    font-size: 35px;
+  }
+  .brand-container h2{
+    font-size: 30px;
+    font-weight: 800;
+  }
+  
+  
+}
+
+@media screen and (max-width:410px) {
+  .parallax-container{
+    height: 30vh;
+  }
+  .parallax-text h1{
+    font-size: 30px;
+  }
+  .parallax-text p{
+    font-size: 12px;
+  }
+  .parallax-text button{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:397px) {
+  .parallax-container{
+    height: 25vh;
+  }
+  .about-us .parallax-text h1{
+    padding-bottom: 10px;
+    font-size: 35px;
+  }
+  .aboutus-content h1{
+    font-size: 32px;
+  }
+  .car-rental-container{
+    width: 100%;
+  }
+   h1,.contact h2{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .car-rental-container h3{
+    font-size: 15px;
+  }
+  .car-rental-container section{
+    width: 95%;
+  }
+  .footer-1{
+    padding: 0;
+    display: grid;
+    place-items: center;
+  }
+  footer p{
+    font-size: 13px;
+    width: 80%;
+  }
+  footer h5{
+    font-size: 20px;
+  }
+  .copyright h6{
+    font-size: 15px;
+    padding: 15px;
+  }
+  footer .contact-section img{
+    height: 5vh;
+  }
+  footer{
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
