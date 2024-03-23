@@ -1,19 +1,22 @@
 import Phone from "../../images/phone.png"
 import Location from "../../images/location.png"
 import { Helmet } from "react-helmet"
+import { Link } from "react-router-dom"
+
 function Contact() {
 
 
 
     const contactData = [
-        { img: Phone, details: "- 9940963631" },
-        { img: Location, details: "- 12/48, Thulasi Baba, Madam Street, Rameswaram - 623536" },
+        { img: Phone, name: "phone", details: "- 9940963631" },
+        { img: Location, name: "location", details: "- 12/48, Thulasi Baba, Madam Street, Rameswaram - 623536" },
     ]
     return (
         <div className='contact'>
             <Helmet>
                 <title>Contact</title>
-                <meta name="description" content="Discover the beauty of Rameswaram and Mandapam with our guided tours and travel packages. Explore Rameswaram's temples, beaches, and cultural heritage with expert guides." />
+                <meta name="description" content="Discover Rameshwaram with Sri Velavan Travels! Affordable & customized travel packages. Book now for lasting memories on this captivating island." />
+                <link rel='canonical' href="/Contact" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
                 Dhanushkodi Beach Adventures,Dhanushkodi History Tours,Dhanushkodi Sunset Viewing,Dhanushkodi Ruins Exploration,Dhanushkodi Eco Tours,Dhanushkodi Photography Expeditions,
@@ -34,12 +37,13 @@ function Contact() {
                     <h2 data-aos="zoom-in" data-aos-duration="2000">Book Your Journey Today</h2>
                     <p data-aos="zoom-out-up" data-aos-duration="2000">Ready to explore the wonders of Rameshwaram with Sri Velavan Travels? Contact us today to book your affordable and customized travel package. Let us be your guide as you create lasting memories on this captivating island.</p>
                     <h5 data-aos="zoom-in-down" data-aos-duration="2000">Sri Velavan Travels - Your Partner in Rameshwaram Exploration!</h5>
+                    <Link to="/" > <button className='home-button'>Get in Touch with Velavan Travels </button></Link>
                 </div>
                 <div className='contact-right'>
                     <h2 data-aos="zoom-in" data-aos-duration="2000">Get in Touch </h2>
                     {contactData.map((data, index) => (
                         <div key={index} className='contact-section'>
-                            <img data-aos="flip-left"
+                            <img data-aos="flip-left" alt={data.name}
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="2000" src={data.img} />
                             <p data-aos="zoom-in-down" data-aos-duration="2000" >{data.details}</p>

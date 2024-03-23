@@ -21,13 +21,13 @@ function Footer() {
                         <Link to="/" className='link'>
                             Home
                         </Link>
-                        <Link to="/Aboutus" className='link'>
+                        <Link to="/About-us" className='link'>
                             About us
                         </Link>
-                        <Link to="/TouristPlace" className='link'>
+                        <Link to="/Tourist-Place" className='link'>
                             Tourist Places
                         </Link>
-                        <Link to="/Typesofcars" className='link'>
+                        <Link to="/Types-of-cars" className='link'>
                             Car Rental
                         </Link>
                         <Link to="/Contact" className='link'>
@@ -39,8 +39,8 @@ function Footer() {
                     <h5>Get in Touch</h5>
                     <>
                         {contactData.map((data, index) => (
-                            <div className='contact-section'>
-                                <img src={data.img} />
+                            <div key={index} className='contact-section'>
+                                <img src={data.img} alt={data.img} />
                                 <p >{data.details}</p>
                             </div>
                         ))}
@@ -48,7 +48,7 @@ function Footer() {
                 </section>
             </footer>
             <div className='copyright'>
-                <h6>@2024 Copyrights Reserved</h6>
+                <h5>@2024 Copyrights Reserved</h5>
             </div>
         </>
     )

@@ -15,6 +15,7 @@ import Flood from "../../images/floodingstone.jpg"
 import { Helmet } from 'react-helmet'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom'
 
 AOS.init();
 
@@ -44,7 +45,8 @@ function TouristPlace() {
         <div className='tourist-place'>
             <Helmet>
                 <title>Tourist Places</title>
-                <meta name="description" content="Discover the beauty of Rameswaram and Mandapam with our guided tours and travel packages. Explore Rameswaram's temples, beaches, and cultural heritage with expert guides." />
+                <meta name="description" content="Explore the beauty of Rameswaram and Mandapam with our guided tours and travel packages. Discover Rameswaram's temples, beaches, and cultural heritage with expert guides." />
+                <link rel='canonical' href="/TouristPlace" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
                 Dhanushkodi Beach Adventures,Dhanushkodi History Tours,Dhanushkodi Sunset Viewing,Dhanushkodi Ruins Exploration,Dhanushkodi Eco Tours,Dhanushkodi Photography Expeditions,
@@ -62,6 +64,7 @@ function TouristPlace() {
             </Helmet>
             <section className='place-section'>
                 <h1 data-aos="zoom-in" data-aos-duration="2000">Places to visit</h1>
+                <Link to="/" className='home-link'><h4 className='home-h5'>Choose Place  and Explore Rameshwaram with Velavan Travels</h4></Link>
                 <article className='place-article' >
                     {PlacesToShow.map((data, index) => (
                         <div key={index} className='place-content' data-aos="flip-left"
@@ -75,6 +78,7 @@ function TouristPlace() {
                         </div>
                     ))}
                 </article >
+
             </section>
         </div>
     )

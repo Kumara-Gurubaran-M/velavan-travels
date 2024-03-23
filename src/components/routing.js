@@ -12,9 +12,9 @@ export default function Routing() {
         <div >
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/Aboutus" element={<About />} />
-                <Route path="/TouristPlace" element={<TouristPlace />} />
-                <Route path="/Typesofcars" element={<Typesofcars />} />
+                <Route path="/About-us" element={<About />} />
+                <Route path="/Tourist-Place" element={<TouristPlace />} />
+                <Route path="/Types-of-cars" element={<Typesofcars />} />
                 <Route path='/Contact' element={<Contact />} />
 
             </Routes>

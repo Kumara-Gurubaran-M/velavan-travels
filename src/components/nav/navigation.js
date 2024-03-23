@@ -20,18 +20,19 @@ function Navigation() {
             <Link className={`navbar ${activeLink === '/' ? 'active' : ''}`} to="/">
                 Home
             </Link>
-            <Link className={`navbar ${activeLink === '/Aboutus' ? 'active' : ''}`} to="/Aboutus">
+            <Link className={`navbar ${activeLink === '/Aboutus' ? 'active' : ''}`} to="/About-us">
                 About us
             </Link>
-            <Link className={`navbar ${activeLink === '/TouristPlace' ? 'active' : ''}`} to="/TouristPlace">
+            <Link className={`navbar ${activeLink === '/TouristPlace' ? 'active' : ''}`} to="/Tourist-Place">
                 Tourist Places
             </Link>
-            <Link className={`navbar ${activeLink === '/Typesofcars' ? 'active' : ''}`} to="/Typesofcars">
+            <Link className={`navbar ${activeLink === '/Typesofcars' ? 'active' : ''}`} to="/Types-of-cars">
                 Car Rental
             </Link>
             <Link className={`navbar ${activeLink === '/Contact' ? 'active' : ''}`} to="/Contact">
                 Contact
             </Link>
+
 
             {menu ? <></> :
 
@@ -40,13 +41,13 @@ function Navigation() {
                     <Link className="menu-nav" onClick={() => setMenu(true)} to="/">
                         Home
                     </Link>
-                    <Link className="menu-nav" onClick={() => setMenu(true)} to="/Aboutus">
+                    <Link className="menu-nav" onClick={() => setMenu(true)} to="/About-us">
                         About Us
                     </Link>
-                    <Link className="menu-nav" onClick={() => setMenu(true)} to="/TouristPlace">
+                    <Link className="menu-nav" onClick={() => setMenu(true)} to="/Tourist-Place">
                         Tourist Places
                     </Link>
-                    <Link className="menu-nav" onClick={() => setMenu(true)} to="/Typesofcars">
+                    <Link className="menu-nav" onClick={() => setMenu(true)} to="/Types-of-cars">
                         Car Rental
                     </Link>
                     <Link className="menu-nav" onClick={() => setMenu(true)} to="/Contact">

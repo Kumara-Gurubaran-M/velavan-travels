@@ -11,7 +11,8 @@ import Templetour from "../../images/sri-ranganathasvamy.png"
 import island from "../../images/Adventures.png"
 import history from "../../images/expedition.png"
 import beach from "../../images/summer-holidays.png"
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     const [offset, setOffset] = useState(0);
@@ -79,14 +80,11 @@ const Home = () => {
     return (
         <div className='home'>
             <Helmet>
-                <title>Sri Velavan Travels</title>
-                <meta name="description" content="Discover the beauty of Rameswaram and Mandapam with our guided tours and travel packages. Explore Rameswaram's temples, beaches, and cultural heritage with expert guides." />
-                <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
-                ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
-                Dhanushkodi Beach Adventures,Dhanushkodi History Tours,Dhanushkodi Sunset Viewing,Dhanushkodi Ruins Exploration,Dhanushkodi Eco Tours,Dhanushkodi Photography Expeditions,
-                Mandapam travel agency,Mandapam tourist information,Mandapam sightseeing tours,Mandapam vacation packages,Mandapam travel experiences,Mandapam travel tips,Mandapam tour operators,mandapam" />
-
-                <meta name="author" content="Sri Velavan Travels" />
+                <title>Velavan Travels - Explore Rameswaram's Best Travel Experiences</title>
+                <meta name="description" content="Discover the best travel experiences in Rameswaram with Sri Velavan Travels. Explore temples, beaches, and cultural heritage with expert guides. Book now!" />
+                <link rel='canonical' href="/" />
+                <meta name="keywords" content="Velavan Travels, Rameswaram travel, Sri Velavan Travels, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage, Rameswaram Sightseeing, Rameswaram Heritage Tours, Rameswaram Cultural Tours, Rameswaram Adventure Tours, Rameswaram Pilgrimage Trips, Rameswaram Wildlife Exploration, Dhanushkodi Excursions, Dhanushkodi Beach Adventures, Dhanushkodi History Tours, Dhanushkodi Sunset Viewing, Dhanushkodi Ruins Exploration, Dhanushkodi Eco Tours, Dhanushkodi Photography Expeditions, Mandapam travel agency, Mandapam tourist information, Mandapam sightseeing tours, Mandapam vacation packages, Mandapam travel experiences, Mandapam travel tips, Mandapam tour operators, mandapam, rameshwaram, ramanathapuram, rameswaram, rameshwaram temple" />
+                <meta name="author" content="Velavan Travels" />
                 <meta property="og:title" content="Rameswaram Travel - Explore the Beauty of Rameswaram" />
                 <meta property="og:description" content="Discover the beauty of Rameswaram with our guided tours and travel packages. Explore Rameswaram's temples, beaches, and cultural heritage with expert guides." />
                 <meta property="og:type" content="website" />
@@ -108,25 +106,35 @@ const Home = () => {
                     <div data-aos="zoom-in-up" data-aos-duration="2000" className="parallax-text">
                         <h1>Sri Velavan Travels</h1>
                         <p>Travel Agency in Rameswaram, open 24/7 and call to explore Rameshwaram</p>
-                        <button>CALL: 9940963631 </button>
+                        <Link to="/"> <button>CALL: 9940963631 </button></Link>
+
+                        {/* <h6 className='home-mission' data-aos="zoom-in-down" data-aos-duration="1800">At Sri Velavan Travels, our mission is to connect travelers with the cultural, spiritual, and natural treasures of Rameshwaram. We believe in creating not just trips but transformative experiences that leave an indelible mark on your soul.</h6> */}
                     </div>
                 </div>
             </div>
 
 
+
             <section className='ourservice-container '>
+                <div className='about-velavan'>
+                    <h3>Welcome to Velavan Travels - Your Gateway to Unforgettable Rameswaram Experiences</h3>
+                    <p>At Velavan Travels, we're more than just a travel agency. We're your trusted partners in exploring the mesmerizing beauty of Rameswaram. With a passion for adventure and a commitment to excellence, we craft journeys that redefine travel experiences.</p>
+                </div>
                 <h2 data-aos="zoom-in" data-aos-duration="2000">Our Service</h2>
                 <div className='ourservice-section'>
                     {serviceData.map((data, index) => (
                         <article key={index} className='ourservice-content'>
                             <img data-aos="flip-left"
+                                alt={data.alt}
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="2000" src={data.img} />
-                            <h4 data-aos="zoom-in-down" data-aos-duration="1800">{data.alt}</h4>
+                            <h3 data-aos="zoom-in-down" data-aos-duration="1800">{data.alt}</h3>
 
                         </article>
                     ))}
+
                 </div>
+                <p className='home-mission-2' data-aos="zoom-in-up" data-aos-duration="1800">Welcome to Velavan Travels, where every journey is a story waiting to be told. Established with a passion for travel and a commitment to delivering exceptional experiences, Sri Velavan Travels is your trusted partner in exploring the wonders of Rameshwaram.</p>
             </section>
 
             <div className='form-container'>
@@ -167,6 +175,7 @@ const Home = () => {
                         </section>
 
                     </div>
+
                     <button type="submit" required >Submit</button>
                 </form>
             </div>
@@ -177,9 +186,10 @@ const Home = () => {
                     {whyServiceData.map((data, index) => (
                         <article key={index} className='service-content'>
                             <img data-aos="flip-left"
+                                alt={data.title}
                                 data-aos-easing="ease-out-cubic"
                                 data-aos-duration="2000" src={data.img} />
-                            <h4 data-aos="zoom-in-down" data-aos-duration="1800">{data.title}</h4>
+                            <h3 data-aos="zoom-in-down" data-aos-duration="1800">{data.title}</h3>
                             <p data-aos="zoom-in-down" data-aos-duration="1600">{data.content}</p>
                         </article>
                     ))}
@@ -192,7 +202,7 @@ const Home = () => {
                 <div className='brand-section'>
                     {brandData.map((data, index) => (
                         <article key={index} className='brand-content'>
-                            <img data-aos="fade-up"
+                            <img data-aos="fade-up" alt={data.alt}
                                 data-aos-anchor-placement="center-center" src={data.img} />
                         </article>
                     ))}

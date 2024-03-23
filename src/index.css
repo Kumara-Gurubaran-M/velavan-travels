@@ -48,7 +48,7 @@ z-index: 999;
   height: auto;
 }
 .logo{
-  width: 120px;
+  width: 140px;
   height: 10px;
 }
 .navbar-section{
@@ -209,7 +209,7 @@ h1{
 .car-rental-container h3{
   color: #a9adac;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-size: 20px;
   font-weight: 400;
 }
@@ -243,9 +243,38 @@ h1{
 .parallax-text {
   text-align: center;
   z-index: 1;
+  width: 80%;
+}
+.home-h5{
+  font-weight: 500;
+  color: #a9adac;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.about-velavan{
+  text-align: center;
+  width: 80%;
 }
 
-
+.about-velavan h3{
+  font-size: 35px;
+  font-family: 300;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Serif', serif;
+  color: #091D36;
+}
+.home-link{
+  text-decoration: none;
+}
+.home-mission{
+  padding-top: 30px;
+  color: transparent;
+}
+.home-mission-2{
+  padding-top: 20px;
+  text-align: center;
+  width: 80%;
+}
 .parallax-text h1{
   color: #F0EFF5;
   font-size: 70px;
@@ -255,7 +284,7 @@ h1{
   color: #c3ccca;
   margin: 0;
 }
-.parallax-text button{
+.parallax-text button,.home-button{
   margin-top: 20px;
   background-color:  #0B4C84;
   padding: 10px;
@@ -264,7 +293,7 @@ h1{
   color: #F0EFF5;
   font-size: 17px;
 }
-.parallax-text button:hover{
+.parallax-text button:hover ,.home-button:hover{
   background-color: #091D36;
   box-shadow: 10px 10px 11px rgba(33,33,33,.2); 
 }
@@ -403,6 +432,7 @@ color: #091D36;
   justify-content: center;
 }
 .contact-section img{
+  width: 8%;
   
   height: 7vh;
 }
@@ -505,7 +535,7 @@ footer p{
   text-align: center;
   
 }
-.copyright h6{
+.copyright h5{
   margin: 0;
   padding: 20px;
   color: #F0EFF5;
@@ -587,6 +617,7 @@ footer p{
   }
   
   
+  
 }
 
 @media screen and (max-width:820px) {
@@ -613,7 +644,7 @@ footer p{
   .parallax-text p{
     font-size: 15px;
   }
-  .parallax-text button{
+  .parallax-text button,.home-button{
     font-size: 17px;
   }
   .aboutus-content{
@@ -627,6 +658,12 @@ footer p{
   }
   .form input{
     height: 4vh;
+  }
+  .about-velavan h3{
+    font-size: 30px;
+  }
+  .about-velavan p{
+    font-size: 15px;
   }
 }
 
@@ -647,6 +684,12 @@ footer p{
   
   .form input{
     width: 60%;
+  }
+  .about-velavan h3{
+    font-size: 28px;
+  }
+  .about-velavan p{
+    font-size: 15px;
   }
   
 }
@@ -702,6 +745,10 @@ footer p{
     font-size: 30px;
     font-weight: 800;
   }
+  .about-velavan h3{
+    font-size: 23px;
+  }
+  
   
   
 }
@@ -716,8 +763,14 @@ footer p{
   .parallax-text p{
     font-size: 12px;
   }
-  .parallax-text button{
+  .parallax-text button,.home-button{
     font-size: 15px;
+  }
+  .about-velavan h3{
+    font-size: 20px;
+  }
+  .about-velavan p{
+    font-size: 12px;
   }
 }
 
