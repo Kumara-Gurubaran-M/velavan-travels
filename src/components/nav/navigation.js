@@ -8,10 +8,7 @@ function Navigation() {
     const [menu, setMenu] = useState(true)
 
     useEffect(() => {
-
         const currentPage = location.pathname;
-
-
         setActiveLink(currentPage);
     }, [location]);
 
@@ -20,13 +17,13 @@ function Navigation() {
             <Link className={`navbar ${activeLink === '/' ? 'active' : ''}`} to="/">
                 Home
             </Link>
-            <Link className={`navbar ${activeLink === '/Aboutus' ? 'active' : ''}`} to="/About-us">
+            <Link className={`navbar ${activeLink === '/About-us' ? 'active' : ''}`} to="/About-us">
                 About us
             </Link>
-            <Link className={`navbar ${activeLink === '/TouristPlace' ? 'active' : ''}`} to="/Tourist-Place">
+            <Link className={`navbar ${activeLink === '/Tourist-Place' ? 'active' : ''}`} to="/Tourist-Place">
                 Tourist Places
             </Link>
-            <Link className={`navbar ${activeLink === '/Typesofcars' ? 'active' : ''}`} to="/Types-of-cars">
+            <Link className={`navbar ${activeLink === '/Types-of-cars' ? 'active' : ''}`} to="/Types-of-cars">
                 Car Rental
             </Link>
             <Link className={`navbar ${activeLink === '/Contact' ? 'active' : ''}`} to="/Contact">

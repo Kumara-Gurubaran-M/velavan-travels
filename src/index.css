@@ -55,7 +55,7 @@ z-index: 999;
   display: flex;
   width: 100%;
 }
-.navbar.active,.navbar:hover{
+.active, .navbar:hover{
   color: rgb(150, 144, 144);
   font-weight: 700;
   font-size: 1.1rem;
@@ -95,6 +95,7 @@ font-family: 'PT Serif', serif;
   row-gap: 40px;
 }
 .place-content {
+  
   text-align: center;
   display: flex;
   flex-direction: column;
