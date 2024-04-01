@@ -57,7 +57,7 @@ function Aboutus() {
             <div className='aboutus-content'>
                 <h1 data-aos="zoom-in" data-aos-duration="2000">Our Mission</h1>
                 <p data-aos="zoom-in-down" data-aos-duration="1800">At Sri Velavan Travels, our mission is to connect travelers with the cultural, spiritual, and natural treasures of Rameshwaram. We believe in creating not just trips but transformative experiences that leave an indelible mark on your soul.</p>
-                <Link to="/" > <button className='home-button'>Explore More  </button></Link>
+                <Link to="/" data-aos="zoom-in" data-aos-duration="1800"  > <button className='home-button'>Explore More  </button></Link>
             </div>
 
 

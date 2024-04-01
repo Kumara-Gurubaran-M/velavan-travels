@@ -33,7 +33,7 @@ function Typesofcars() {
             <section className='car'>
                 <h1 data-aos="zoom-in" data-aos-duration="3000">Available Cars</h1>
                 <h3 data-aos="zoom-in" data-aos-duration="2000">The most popular car we rent</h3>
-                <Link to="/" className='home-link'><h5 className='home-h5'>Choose Comfort vehicles and Explore Rameshwaram with Velavan Travels</h5></Link>
+                <Link to="/" className='home-link'><h5 data-aos="zoom-in" data-aos-duration="2000" className='home-h5'>Choose Comfort vehicles and Explore Rameshwaram with Velavan Travels</h5></Link>
 
                 <div className='car-section'>
                     <section className='demo' data-aos="flip-left"

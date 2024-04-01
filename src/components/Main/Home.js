@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
-import emailjs from '@emailjs/browser';
+import React, { useEffect, useState } from 'react'
 import Templebg from '../../images/rameswaram-bg.webp'
 import LowPrice from '../../images/lowprice.png'
 import Staff from "../../images/staff.png"
@@ -16,35 +15,7 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
     const [offset, setOffset] = useState(0);
-    const form = useRef();
-    const [submitted, setSubmitted] = useState(false);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        const isValid = form.current.checkValidity();
-        if (!isValid) {
-            alert("Please fill in all fields.");
-            return;
-        }
-
-        emailjs
-            .sendForm('service_1xprhkb', 'template_wezrvbn', form.current, {
-                publicKey: 'UbU6D7ZiFMzgoURDS',
-            })
-            .then(
-                () => {
-                    console.log('SUCCESS!');
-                    alert('Form submitted successfully!');
-                    // Clear input values
-                    form.current.reset();
-                    setSubmitted(true);
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
-            );
-    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -108,7 +79,7 @@ const Home = () => {
                         <p>Travel Agency in Rameswaram, open 24/7 and call to explore Rameshwaram</p>
                         <Link to="/"> <button>CALL: 9940963631 </button></Link>
 
-                        {/* <h6 className='home-mission' data-aos="zoom-in-down" data-aos-duration="1800">At Sri Velavan Travels, our mission is to connect travelers with the cultural, spiritual, and natural treasures of Rameshwaram. We believe in creating not just trips but transformative experiences that leave an indelible mark on your soul.</h6> */}
+
                     </div>
                 </div>
             </div>
@@ -117,8 +88,8 @@ const Home = () => {
 
             <section className='ourservice-container '>
                 <div className='about-velavan'>
-                    <h3>Welcome to Velavan Travels - Your Gateway to Unforgettable Rameswaram Experiences</h3>
-                    <p>At Velavan Travels, we're more than just a travel agency. We're your trusted partners in exploring the mesmerizing beauty of Rameswaram. With a passion for adventure and a commitment to excellence, we craft journeys that redefine travel experiences.</p>
+                    <h3 data-aos="zoom-in" data-aos-duration="3000">Welcome to Velavan Travels - Your Gateway to Unforgettable Rameswaram Experiences</h3>
+                    <p data-aos="zoom-in" data-aos-duration="2000">At Velavan Travels, we're more than just a travel agency. We're your trusted partners in exploring the mesmerizing beauty of Rameswaram. With a passion for adventure and a commitment to excellence, we craft journeys that redefine travel experiences.</p>
                 </div>
                 <h2 data-aos="zoom-in" data-aos-duration="2000">Our Service</h2>
                 <div className='ourservice-section'>
@@ -137,48 +108,7 @@ const Home = () => {
                 <p className='home-mission-2' data-aos="zoom-in-up" data-aos-duration="1800">Welcome to Velavan Travels, where every journey is a story waiting to be told. Established with a passion for travel and a commitment to delivering exceptional experiences, Sri Velavan Travels is your trusted partner in exploring the wonders of Rameshwaram.</p>
             </section>
 
-            <div className='form-container'>
-                <h2 data-aos="zoom-in" data-aos-duration="2000">Get In Touch </h2><br />
-                <form data-aos="zoom-in-up" data-aos-duration="2000" className='form' ref={form} onSubmit={sendEmail}>
-                    <div className='form-section'>
-                        <section>
-                            <label>Name: </label>
-                            <input type="text" name="user_name" required />
-                        </section>
 
-                        <section>
-                            <label>Phone no: </label>
-                            <input type="number" name="user_number" required />
-                        </section>
-                    </div>
-                    <div className='form-section'>
-                        <section>
-                            <label>Your Location: </label>
-                            <input type="text" name="user_place" required />
-                        </section>
-
-
-                        <section>
-                            <label>No of people: </label>
-                            <input type="number" name="people" required />
-                        </section>
-
-                    </div>
-                    <div className='form-section'>
-                        <section>
-                            <label>No of Days: </label>
-                            <input type="number" name="days" required />
-                        </section>
-                        <section>
-                            <label>Message: </label>
-                            <textarea name="message" />
-                        </section>
-
-                    </div>
-
-                    <button type="submit" required >Submit</button>
-                </form>
-            </div>
 
             <section className='service-container'>
                 <h2 data-aos="zoom-in" data-aos-duration="2000">Why choose our Service</h2>

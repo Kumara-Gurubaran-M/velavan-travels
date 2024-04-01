@@ -64,7 +64,7 @@ function TouristPlace() {
             </Helmet>
             <section className='place-section'>
                 <h1 data-aos="zoom-in" data-aos-duration="2000">Places to visit</h1>
-                <Link to="/" className='home-link'><h4 className='home-h5'>Choose Place  and Explore Rameshwaram with Velavan Travels</h4></Link>
+                <Link data-aos="zoom-in" data-aos-duration="2000" to="/" className='home-link'><h4 className='home-h5'>Choose Place  and Explore Rameshwaram with Velavan Travels</h4></Link>
                 <article className='place-article' >
                     {PlacesToShow.map((data, index) => (
                         <div key={index} className='place-content' data-aos="flip-left"

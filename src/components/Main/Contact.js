@@ -1,3 +1,5 @@
+import { useRef, useState } from "react"
+import emailjs from '@emailjs/browser';
 import Phone from "../../images/phone.png"
 import Location from "../../images/location.png"
 import { Helmet } from "react-helmet"
@@ -5,6 +7,35 @@ import { Link } from "react-router-dom"
 
 function Contact() {
 
+    const form = useRef();
+    const [submitted, setSubmitted] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        const isValid = form.current.checkValidity();
+        if (!isValid) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        emailjs
+            .sendForm('service_1xprhkb', 'template_wezrvbn', form.current, {
+                publicKey: 'UbU6D7ZiFMzgoURDS',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    alert('Form submitted successfully!');
+
+                    form.current.reset();
+                    setSubmitted(true);
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
 
 
     const contactData = [
@@ -37,7 +68,7 @@ function Contact() {
                     <h2 data-aos="zoom-in" data-aos-duration="2000">Book Your Journey Today</h2>
                     <p data-aos="zoom-out-up" data-aos-duration="2000">Ready to explore the wonders of Rameshwaram with Sri Velavan Travels? Contact us today to book your affordable and customized travel package. Let us be your guide as you create lasting memories on this captivating island.</p>
                     <h5 data-aos="zoom-in-down" data-aos-duration="2000">Sri Velavan Travels - Your Partner in Rameshwaram Exploration!</h5>
-                    <Link to="/" > <button className='home-button'>Get in Touch with Velavan Travels </button></Link>
+                    <Link to="/" > <button data-aos="zoom-in-down" data-aos-duration="2000" className='home-button'>Get in Touch with Velavan Travels </button></Link>
                 </div>
                 <div className='contact-right'>
                     <h2 data-aos="zoom-in" data-aos-duration="2000">Get in Touch </h2>
@@ -51,6 +82,49 @@ function Contact() {
                     ))}
 
                 </div>
+
+            </div>
+            <div className='form-container'>
+                <h2 data-aos="zoom-in" data-aos-duration="2000">Get In Touch </h2><br />
+                <form data-aos="zoom-in-up" data-aos-duration="2000" className='form' ref={form} onSubmit={sendEmail}>
+                    <div className='form-section'>
+                        <section>
+                            <label>Name: </label>
+                            <input type="text" name="user_name" required />
+                        </section>
+
+                        <section>
+                            <label>Phone no: </label>
+                            <input type="number" name="user_number" required />
+                        </section>
+                    </div>
+                    <div className='form-section'>
+                        <section>
+                            <label>Your Location: </label>
+                            <input type="text" name="user_place" required />
+                        </section>
+
+
+                        <section>
+                            <label>No of people: </label>
+                            <input type="number" name="people" required />
+                        </section>
+
+                    </div>
+                    <div className='form-section'>
+                        <section>
+                            <label>No of Days: </label>
+                            <input type="number" name="days" required />
+                        </section>
+                        <section>
+                            <label>Message: </label>
+                            <textarea name="message" />
+                        </section>
+
+                    </div>
+
+                    <button type="submit" required >Submit</button>
+                </form>
             </div>
 
         </div>
