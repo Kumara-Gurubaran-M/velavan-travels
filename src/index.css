@@ -159,7 +159,16 @@ font-family: 'PT Serif', serif;
 h1{
   margin: 0;
 }
-
+.home-h5{
+  font-weight: 500;
+  color: #a9adac;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.home-link{
+  text-decoration: none;
+  text-align: center;
+}
 /*-------------------------car section---------------*/
 .car-rental-container{
   display: grid;
@@ -245,12 +254,7 @@ h1{
   z-index: 1;
   width: 80%;
 }
-.home-h5{
-  font-weight: 500;
-  color: #a9adac;
-  margin: 0;
-  margin-bottom: 15px;
-}
+
 .about-velavan{
   text-align: center;
   width: 80%;
@@ -263,9 +267,7 @@ h1{
   font-family: 'PT Serif', serif;
   color: #091D36;
 }
-.home-link{
-  text-decoration: none;
-}
+
 .home-mission{
   padding-top: 30px;
   color: transparent;
