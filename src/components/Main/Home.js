@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import Templebg from '../../images/rameswaram-bg.webp';
 import LowPrice from '../../images/lowprice.png';
@@ -23,10 +25,13 @@ const Home = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+
 
     const whyServiceData = [
         { img: LowPrice, title: 'Low prices', content: 'Sri Velavan Travels offers top-class taxi services in Rameswaram at affordable prices.' },
@@ -68,7 +73,7 @@ const Home = () => {
             <div className='parallax-container'>
                 <div className='parallax-content'>
                     <img src={Templebg} alt='Rameswaram Travel Background' className='parallax-bg' style={{ transform: `translateY(${offset * 0.5}px)` }} />
-                    <div className='parallax-text'>
+                    <div className='parallax-text' data-aos='zoom-in-up' data-aos-duration='2000'>
                         <h1>Sri Velavan Travels</h1>
                         <p>Leading Travel Agency in Rameswaram - 24/7 Taxi Services & Guided Tours</p>
                         <Link to='/'>
@@ -79,40 +84,40 @@ const Home = () => {
             </div>
 
             <section className='ourservice-container'>
-                <div className='about-velavan'>
+                <div className='about-velavan' data-aos='zoom-in' data-aos-duration='3000'>
                     <h3>Welcome to Velavan Travels - Your Gateway to Unforgettable Rameswaram Experiences</h3>
                     <p>At Velavan Travels, we're more than just a travel agency. We're your trusted partners in exploring the mesmerizing beauty of Rameswaram. With a passion for adventure and a commitment to excellence, we craft journeys that redefine travel experiences.</p>
                 </div>
-                <h2>Our Services</h2>
+                <h2 data-aos='zoom-in' data-aos-duration='2000'>Our Services</h2>
                 <div className='ourservice-section'>
                     {serviceData.map((data, index) => (
-                        <article key={index} className='ourservice-content'>
+                        <article key={index} className='ourservice-content' data-aos='fade-up' data-aos-duration='2000'>
                             <img alt={data.alt} src={data.img} />
-                            <h3>{data.alt}</h3>
+                            <h3 data-aos='zoom-in-down' data-aos-duration='1800'>{data.alt}</h3>
                         </article>
                     ))}
                 </div>
-                <p className='home-mission-2'>Discover the enchanting beauty of Rameswaram with Velavan Travels. Our mission is to offer top-notch travel experiences, whether you're on a pilgrimage, exploring historical sites, or enjoying the beach. Book your Rameswaram adventure with us today!</p>
+                <p className='home-mission-2' data-aos='zoom-in-up' data-aos-duration='1800'>Discover the enchanting beauty of Rameswaram with Velavan Travels. Our mission is to offer top-notch travel experiences, whether you're on a pilgrimage, exploring historical sites, or enjoying the beach. Book your Rameswaram adventure with us today!</p>
             </section>
 
             <section className='service-container'>
-                <h2>Why Choose Our Service</h2>
+                <h2 data-aos='zoom-in' data-aos-duration='2000'>Why Choose Our Service</h2>
                 <div className='service-section'>
                     {whyServiceData.map((data, index) => (
-                        <article key={index} className='service-content'>
+                        <article key={index} className='service-content' data-aos='fade-up' data-aos-duration='2000'>
                             <img alt={data.title} src={data.img} />
-                            <h3>{data.title}</h3>
-                            <p>{data.content}</p>
+                            <h3 data-aos='zoom-in-down' data-aos-duration='1800'>{data.title}</h3>
+                            <p data-aos='zoom-in-down' data-aos-duration='1600'>{data.content}</p>
                         </article>
                     ))}
                 </div>
             </section>
 
             <section className='brand-container'>
-                <h2>Popular Car Brands We Rent</h2>
+                <h2 data-aos='zoom-in' data-aos-duration='2000'>Popular Car Brands We Rent</h2>
                 <div className='brand-section'>
                     {brandData.map((data, index) => (
-                        <article key={index} className='brand-content'>
+                        <article key={index} className='brand-content' data-aos='fade-up' data-aos-anchor-placement='center-center'>
                             <img alt={data.alt} src={data.img} />
                         </article>
                     ))}
@@ -123,3 +128,4 @@ const Home = () => {
 };
 
 export default Home;
+

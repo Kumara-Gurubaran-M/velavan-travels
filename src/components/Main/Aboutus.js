@@ -21,10 +21,23 @@ function Aboutus() {
     return (
         <div className='about-us'>
             <Helmet>
-                <title>About Us</title>
+                <title>About Sri Velavan Travels - Discover Rameswaram</title>
                 <meta name="description" content="Explore Rameshwaram with Sri Velavan Travels! Discover enchanting beauty, cultural & spiritual treasures, creating unforgettable adventures." />
                 <link rel='canonical' href="https://www.velavantravels.com/About-us" />
-                {/* Other meta tags */}
+                <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
+                ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
+                Dhanushkodi Beach Adventures,Dhanushkodi History Tours,Dhanushkodi Sunset Viewing,Dhanushkodi Ruins Exploration,Dhanushkodi Eco Tours,Dhanushkodi Photography Expeditions,
+                Mandapam travel agency,Mandapam tourist information,Mandapam sightseeing tours,Mandapam vacation packages,Mandapam travel experiences,Mandapam travel tips,Mandapam tour operators,mandapam" />
+                <meta name="author" content="Velavan Travels" />
+                <meta property="og:title" content="Rameswaram Travel - Explore the Beauty of Rameswaram" />
+                <meta property="og:description" content="Discover the beauty of Rameswaram with our guided tours and travel packages. Explore Rameswaram's temples, beaches, and cultural heritage with expert guides." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.velavantravels.com" />
+                <meta property="og:image" content="https://imgur.com/BAD0dFp" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:site_name" content="Rameswaram Travel" />
+                <meta property="og:locale" content="en_US" />
             </Helmet>
 
             <div className="parallax-container">

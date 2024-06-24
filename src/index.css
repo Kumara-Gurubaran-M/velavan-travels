@@ -190,9 +190,6 @@ h1{
   place-items: center;
   
 }
-
-
-
 .demo img{
   height: 40vh;
   width: 100%;
@@ -405,15 +402,16 @@ width: 80%;
 
 .about-velavan h3 {
   font-size: 35px;
-  font-family: 'Poppins', sans-serif; /* Use single declaration for font-family */
+  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Serif', serif;
   color: #091D36;
 }
 
 .home-mission-2 {
   padding-top: 20px;
   text-align: center;
+  margin-bottom: 10px;
   width: 80%;
-  margin: auto; /* Center align horizontally */
 }
 
 .parallax-text h1 {
@@ -549,7 +547,7 @@ width: 80%;
 .ourservice-content img{
   width: 60%;
 }
-.ourservice-content h4{
+.ourservice-content h3{
   font-size: 25px;
   font-weight: 600;
   color: #091D36;
