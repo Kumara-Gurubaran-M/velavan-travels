@@ -492,7 +492,7 @@ width: 80%;
 
 .brand-content img {
   width: 50%;
-  max-width: 100%; /* Ensure images do not exceed container */
+  max-width: 100%;
 }
 
 .brand-section {
