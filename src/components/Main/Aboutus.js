@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import About from "../../images/aboutus.jpg"
 import { Helmet } from "react-helmet"
 import { Link } from 'react-router-dom'
+import LazyLoad from 'react-lazyload';
 
 function Aboutus() {
     const [offset, setOffset] = useState(0);
@@ -20,8 +21,8 @@ function Aboutus() {
     return (
         <div className='about-us'>
             <Helmet>
-                <title>About Us</title>
-                <meta name="description" content="Explore Rameshwaram with Sri Velavan Travels! Discover enchanting beauty, cultural & spiritual treasures, creating unforgettable adventures." />
+                <title>About Sri Velavan Travels - Discover Rameswaram</title>
+                <meta name="description" content="Discover Sri Velavan Travels, your trusted partner in exploring Rameswaram. Explore the beauty of Rameswaram's temples, beaches, and cultural heritage with expert guides." />
                 <link rel='canonical' href="https://www.velavantravels.com/About-us" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
@@ -41,12 +42,15 @@ function Aboutus() {
 
             <div className="parallax-container">
                 <div className="parallax-content">
-                    <img
-                        src={About}
-                        alt="Background"
-                        className="parallax-bg"
-                        style={{ transform: `translateY(${offset * 0.5}px)` }}
-                    />
+                    <LazyLoad height={200}>
+                        <img
+                            src={About}
+                            alt="Background"
+                            className="parallax-bg"
+                            style={{ transform: `translateY(${offset * 0.5}px)` }}
+                        />
+                    </LazyLoad>
+
                     <div className="parallax-text" >
                         <h1 data-aos="zoom-in-up" data-aos-duration="2000">About us</h1>
                         <p data-aos="zoom-in-up" data-aos-duration="1800">Welcome to Sri Velavan Travels, where every journey is a story waiting to be told. Established with a passion for travel and a commitment to delivering exceptional experiences, Sri Velavan Travels is your trusted partner in exploring the wonders of Rameshwaram.</p>

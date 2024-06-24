@@ -241,6 +241,7 @@ h1{
 }
 
 .parallax-bg {
+  will-change: transform;
   width: 100%;
   height: auto;
   position: absolute;

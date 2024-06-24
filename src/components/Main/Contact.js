@@ -45,8 +45,8 @@ function Contact() {
     return (
         <div className='contact'>
             <Helmet>
-                <title>Contact</title>
-                <meta name="description" content="Discover Rameshwaram with Sri Velavan Travels! Affordable & customized travel packages. Book now for lasting memories on this captivating island." />
+                <title>Contact Sri Velavan Travels - Explore Rameswaram</title>
+                <meta name="description" content="Contact Sri Velavan Travels for booking customized travel packages in Rameswaram. Explore Rameswaram's temples, beaches, and cultural heritage with expert guides." />
                 <link rel='canonical' href="https://www.velavantravels.com/Contact" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,

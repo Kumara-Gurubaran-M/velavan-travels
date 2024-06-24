@@ -44,8 +44,8 @@ function TouristPlace() {
     return (
         <div className='tourist-place'>
             <Helmet>
-                <title>Tourist Places</title>
-                <meta name="description" content="Explore the beauty of Rameswaram and Mandapam with our guided tours and travel packages. Discover Rameswaram's temples, beaches, and cultural heritage with expert guides." />
+                <title>Places to Visit in Rameswaram - Sri Velavan Travels</title>
+                <meta name="description" content="Discover the top tourist places in Rameswaram with Sri Velavan Travels. Explore Rameswaram's temples, beaches, and cultural heritage with our expert guides." />
                 <link rel='canonical' href="https://www.velavantravels.com/Tourist-Place" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
@@ -70,7 +70,7 @@ function TouristPlace() {
                         <div key={index} className='place-content' data-aos="flip-left"
                             data-aos-easing="ease-out-cubic"
                             data-aos-duration="2000">
-                            <img src={data.image} alt={data.name} />
+                            <img src={data.image} alt={data.name} loading="lazy" />
                             <div className='article-text'>
                                 <h4 data-aos="zoom-in" data-aos-duration="3000">{data.name}</h4>
                                 <p className='hidden-card'>{data.msg}</p>
