@@ -22,7 +22,7 @@ function Aboutus() {
             <Helmet>
                 <title>About Us</title>
                 <meta name="description" content="Explore Rameshwaram with Sri Velavan Travels! Discover enchanting beauty, cultural & spiritual treasures, creating unforgettable adventures." />
-                <link rel='canonical' href="/Aboutus" />
+                <link rel='canonical' href="https://www.velavantravels.com/About-us" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
                 Dhanushkodi Beach Adventures,Dhanushkodi History Tours,Dhanushkodi Sunset Viewing,Dhanushkodi Ruins Exploration,Dhanushkodi Eco Tours,Dhanushkodi Photography Expeditions,

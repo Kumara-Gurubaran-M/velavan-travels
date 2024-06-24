@@ -46,7 +46,7 @@ function TouristPlace() {
             <Helmet>
                 <title>Tourist Places</title>
                 <meta name="description" content="Explore the beauty of Rameswaram and Mandapam with our guided tours and travel packages. Discover Rameswaram's temples, beaches, and cultural heritage with expert guides." />
-                <link rel='canonical' href="/TouristPlace" />
+                <link rel='canonical' href="https://www.velavantravels.com/Tourist-Place" />
                 <meta name="keywords" content="Rameswaram travel,rameswaram travel service, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage,Rameswaram Sightseeing
                 ,Rameswaram Heritage Tours,Rameswaram Cultural Tours,Rameswaram Adventure Tours,Rameswaram Pilgrimage Trips,Rameswaram Wildlife Exploration,Dhanushkodi Excursions,
                 Dhanushkodi Beach Adventures,Dhanushkodi History Tours,Dhanushkodi Sunset Viewing,Dhanushkodi Ruins Exploration,Dhanushkodi Eco Tours,Dhanushkodi Photography Expeditions,

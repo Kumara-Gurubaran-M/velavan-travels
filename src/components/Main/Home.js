@@ -52,13 +52,13 @@ const Home = () => {
             <Helmet>
                 <title>Velavan Travels - Rameswaram Travels & Taxi Services</title>
                 <meta name='description' content="Discover the best travel experiences in Rameswaram with Sri Velavan Travels. We offer affordable taxi services, guided temple tours, beach retreats, and more." />
-                <link rel='canonical' href='/' />
+                <link rel='canonical' href='https://www.velavantravels.com/' />
                 <meta name='keywords' content='Rameswaram travels, Rameswaram taxi, Mandapam travels, Mandapam taxi,Velavan Travels, Rameswaram tours, Rameswaram temples, Rameswaram beaches, Rameswaram cultural heritage' />
                 <meta name='author' content='Velavan Travels' />
                 <meta property='og:title' content="Velavan Travels - Rameswaram Travels & Taxi Services" />
                 <meta property='og:description' content="Explore the beauty of Rameswaram with our affordable taxi services, guided tours, and travel packages. Book your Rameswaram adventure with Sri Velavan Travels today." />
                 <meta property='og:type' content='website' />
-                <meta property='og:url' content='https://www.velavantravels.com' />
+                <meta property='og:url' content='https://www.velavantravels.com/' />
                 <meta property='og:image' content='https://imgur.com/BAD0dFp' />
                 <meta property='og:image:width' content='1200' />
                 <meta property='og:image:height' content='630' />
