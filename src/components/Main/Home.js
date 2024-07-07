@@ -77,7 +77,7 @@ const Home = () => {
                         <h1>Sri Velavan Travels</h1>
                         <p>Leading Travel Agency in Rameswaram - 24/7 Taxi Services & Guided Tours</p>
                         <Link to='/'>
-                            <button className='home-button'>CALL: 9940963631 num</button>
+                            <button className='home-button'>CALL: 9940963631</button>
                         </Link>
                     </div>
                 </div>
